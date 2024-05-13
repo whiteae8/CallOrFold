@@ -4,7 +4,7 @@ CallOrFold
 <br/><br>
 ## Example run: <br/><br>
 <img width="765" alt="Screenshot 2024-05-13 at 3 06 45 PM" src="https://github.com/whiteae8/CallOrFold/assets/78070322/80622917-bafa-4fde-98cd-cf8590e51404">
-</br><br/><br>
+</br><br/><br><br>
 ## Notes: <br/><br>
 * Utilizes pokerstove poker hand evaluation engine to calculate equity https://github.com/andrewprock/pokerstove/tree/master <br/><br>
 * Set up: Clone repository, navigate to repo folder in terminal & type "$ node server.js" - a clickable link should show up. Refresh for new hands<br/><br>

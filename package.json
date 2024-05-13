@@ -1,0 +1,17 @@
+{
+  "name": "callorfold",
+  "version": "1.0.0",
+  "description": "poker practice game",
+  "main": "public/callorfold.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "ashley white",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

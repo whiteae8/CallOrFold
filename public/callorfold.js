@@ -121,9 +121,9 @@ async function checkAnswer(value) {
         }
 
         if (callorFold(pot, bet, eq.equity)) {
-            gameLog.innerHTML += `CALL - NOTE EQUITY IS NOT ACCURATE AT THIS TIME<br>`;
+            gameLog.innerHTML += `CALL *note equity may be incorrect<br>`;
         } else {
-            gameLog.innerHTML += `FOLD - NOTE EQUITY IS NOT ACCURATE AT THIS TIME<br>`;
+            gameLog.innerHTML += `FOLD *note equity may be incorrect<br>`;
         }
 
         let potOddsPercentage = (potOdds(pot, bet) * 100).toFixed(2) + '%';

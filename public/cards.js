@@ -66,7 +66,7 @@ let flop = cards.slice(cardsDrawn, cardsDrawn + 3);
 
 /*
 HTML CODE
-
+*/
 updateCardElement(document.getElementById('c1'), hand[0]);
 updateCardElement(document.getElementById('c2'), hand[1]);
 updateCardElement(document.getElementById('f1'), flop[0]);
@@ -74,8 +74,8 @@ updateCardElement(document.getElementById('f2'), flop[1]);
 updateCardElement(document.getElementById('f3'), flop[2]);
 
 export { flop, hand, cards };
-*/
 
-module.exports = { cards, flop, hand, createCard, goodHand}; // TEST CODE
+
+//module.exports = { cards, flop, hand, createCard, goodHand}; // TEST CODE
 
 

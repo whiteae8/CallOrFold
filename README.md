@@ -1,7 +1,7 @@
 CallOrFold
 ==========
 ## Poker Puzzle Game by Ashley White (In Progress)
-<br/> <br/>
+<br/>
 ### Example run: <br/>
 <img width="765" alt="Screenshot 2024-05-13 at 3 06 45 PM" src="https://github.com/whiteae8/CallOrFold/assets/78070322/80622917-bafa-4fde-98cd-cf8590e51404">
 </br><br/>

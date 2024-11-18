@@ -21,6 +21,17 @@ const suit_chars = ['s', 'c', 'd', 'h'];
 const values = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'];
 const num_values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 
+// Map letter ranks to values and vice versa
+const rankMap = {};
+values.forEach((rank, index) => {
+    rankMap[rank] = num_values[index];
+});
+
+const reverseRankMap = {};
+values.forEach((rank, index) => {
+    reverseRankMap[num_values[index]] = rank;
+});
+
 for (let j = 0; j < suits.length; j++) {
     for (let i = 0; i < values.length; i++) {
         cards.push(createCard(values[i], suits[j], num_values[i], suit_chars[j]));
@@ -66,7 +77,7 @@ let flop = cards.slice(cardsDrawn, cardsDrawn + 3);
 
 /*
 HTML CODE
-*/
+
 updateCardElement(document.getElementById('c1'), hand[0]);
 updateCardElement(document.getElementById('c2'), hand[1]);
 updateCardElement(document.getElementById('f1'), flop[0]);
@@ -74,8 +85,8 @@ updateCardElement(document.getElementById('f2'), flop[1]);
 updateCardElement(document.getElementById('f3'), flop[2]);
 
 export { flop, hand, cards };
+*/
 
-
-//module.exports = { cards, flop, hand, createCard, goodHand}; // TEST CODE
+module.exports = { cards, flop, hand, createCard, goodHand, rankMap, reverseRankMap, num_values, values}; // TEST CODE
 
 

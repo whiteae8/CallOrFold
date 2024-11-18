@@ -36,6 +36,12 @@ const RANK_CLASS_TO_STRING = {
     9: 'highcard',
 };
 
+// Create a reverse mapping for efficient lookups
+const STRING_TO_RANK_CLASS = {};
+for (const [key, value] of Object.entries(RANK_CLASS_TO_STRING)) {
+    STRING_TO_RANK_CLASS[value] = parseInt(key, 10);
+}
+
 function numSuits(board) {
     const uniqueSuits = new Set();
     // Add each card's suit to the Set
@@ -295,7 +301,8 @@ module.exports = {
     getQualifier,
     getMadeHandSubqualifier,
     isPocketPair,
-    RANK_CLASS_TO_STRING
+    RANK_CLASS_TO_STRING,
+    STRING_TO_RANK_CLASS
 };
 
 

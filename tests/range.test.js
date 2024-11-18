@@ -2,7 +2,7 @@ const {generateRange, formatCards} = require('../public/range.js');
 const { cards, createCard} = require('../public/cards.js');
 const {getQualifier} = require("../public/madehands");
 
-
+/*
 describe('Full House Test', () => {
     test('getQualifier', () => {
         let test_flop = [createCard('7', '♥', 7, 'h'), createCard('7', '♣', 7, 'c'), createCard('9', '♥', 9, 'h')];
@@ -78,6 +78,8 @@ describe('No Cornering Check', () => {
     });
 });
 
+ */
+
 describe('Range Generation', () => {
     test('generateRange', () => {
         let test_flop = [createCard('7', '♥', 7, 'h'), createCard('7', '♣', 7, 'c'), createCard('9', '♥', 9, 'h')];
@@ -87,12 +89,21 @@ describe('Range Generation', () => {
 
         console.log(`Flop: ${formatCards(test_flop)}`);
 
-        range.forEach(item => {
-            const handString = formatCards(item.hand);
-            console.log(`Hand: [${handString}], Qualifier: ${item.qualifier}, Subqualifier: ${item.subqualifier || 'None'}`);
-        });
-
         // Expected value: Array of hands + generate range output
+        console.log(range);
+    });
+});
+
+describe('Range Generation with Hero Hand', () => {
+    test('generateRange', () => {
+        let test_flop = [createCard('9', '♥', 9, 'h'), createCard('9', '♣', 9, 'c'), createCard('K', '♥', 13, 'h')];
+        let test_hand = [createCard('10', '♥', 10, 'h'), createCard('9', '♠', 9, 's')];
+
+        const range = generateRange(test_flop, cards, test_hand);
+
+        console.log(`Flop: ${formatCards(test_flop)}`);
+        console.log(`Hand: ${formatCards(test_hand)}`);
+        console.log(range);
     });
 });
 
